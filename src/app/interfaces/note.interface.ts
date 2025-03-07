@@ -5,3 +5,5 @@ export interface Note {
     content:string;
     marked: boolean;
 }
+
+//warum wird es nicht gepushed in github???

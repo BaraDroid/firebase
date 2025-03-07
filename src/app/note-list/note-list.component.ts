@@ -23,12 +23,22 @@ export class NoteListComponent {
     this.noteList = this.getDummyData()
   }
 
+  // getList(): Note[] {    verze, ktera mi osefuje jenom notes
+  //   return this.noteService.normalNotes;
+  // }
+
+  //verze, ktera mi osefuje i trashnotes:
   getList(): Note[] {
-    return this.noteService.normalNotes;
+    if(this.status =='notes') {
+      return this.noteService.normalNotes;
+    }
+    else {
+      return this.noteService.trashNotes;
+    }
   }
 
   // getTrashList(): Note[] {
-    
+   // return 
   // }
 
   changeFavFilter(filter:"all" | "fav"){
